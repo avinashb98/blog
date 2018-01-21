@@ -53,7 +53,6 @@ app.use('/post', postRoutes);
 //home route
 app.get('/', (req, res)=> {
   Post.find().then((posts)=> {
-    console.log(posts[0].title);
     res.render('home', {posts: posts, user: req.user})
   })
 });

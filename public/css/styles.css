@@ -6,9 +6,19 @@
     background: #ff5353;
 }
 nav {
-  padding: 40px 40px 0px 40px;
+  padding: 40px 40px 20px 40px;
   margin-bottom:40px;
+  background-color: #008975;
+}
+nav ul {
+  color: #00BF9A;
+}
+nav ul a {
+  color: #fff;
 }
 a.post-new {
   float: right;
+}
+body {
+  background-color: #F5F5F5;
 }
