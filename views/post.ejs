@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%= post.title%></title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    </head>
+    <body>
+      <nav>
+          <ul class="nav nav-tabs">
+
+            <li class="nav-item">
+              <a class="nav-link" href="/">Homepage</a>
+            </li>
+
+            <% if(user) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile">Profile</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/logout">Logout</a>
+              </li>
+            <%} else {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/login">Login</a>
+              </li>
+            <%} %>
+          </ul>
+      </nav>
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><%= post.title%></h5>
+              <h5 class="card-subtitle mb-2 text-muted"><%= post.author%></h6>
+              <p class="card-text"><%= post.content%></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <main>
+          <div class="">
+            <% post.comments.forEach((comment)=> {%>
+                  <li><%= comment %></li>
+            <%}) %>
+          </div>
+          <form class="" action="/post/<%= post.id %>/comment" method="post">
+            <input type="text" name="content" value="">
+            <button type="submit" name="button">Add Comment</button>
+          </form>
+        </main> -->
+    </body>
+</html>
